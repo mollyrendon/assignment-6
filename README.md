@@ -12,6 +12,8 @@ A weather app for users to check the weather in each major city.
 
 # Website
 
+https://mollyrendon.github.io/assignment-6/
+
 # Contribution
 
 Made by Molly Rendon

@@ -68,7 +68,7 @@ input[type="text"] {
 
 /* Display Weather Styles */
 .display-weather {
-  background: rgba(53, 39, 39, 0.4);
+  background: rgba(27, 24, 24, 0.4);
   padding: 15px;
   margin-left: 15px;
   display: flex;
