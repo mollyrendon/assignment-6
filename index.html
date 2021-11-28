@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <h1 class="title">Weather Dashboard</h1>
+        </nav>
+    </header>
+
+    <div class="repos-container">
+        <div class="city-search">
+            <form class="forecast-form" id="forecast-form">
+                <h2 class="city-header">Search for a City:</h2>
+                <div class="form-content">
+                    <input type="text" id="search-input">
+                    <button onclick="getCityDetails(event)" type="submit" id="search-btn"
+                        class="search-btn">Search</button>
+                </div>
+            </form>
+            <div class="search-history">
+                <p>Search History Data</p>
+            </div>
+        </div>
+        <div class="display-weather" id="display-weather">
+            <div class="main-forecast" id="main-forecast"></div>
+            <div class="five-forecast" id="five-forecast"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
