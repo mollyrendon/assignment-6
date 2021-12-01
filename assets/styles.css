@@ -68,7 +68,7 @@ input[type="text"] {
 
 /* Display Weather Styles */
 .display-weather {
-  background: rgba(27, 24, 24, 0.4);
+  background: rgba(238, 233, 233, 0.4);
   padding: 15px;
   margin-left: 15px;
   display: flex;
@@ -76,4 +76,18 @@ input[type="text"] {
   flex-direction: column;
   min-width: 70%;
   line-height: 2;
+}
+
+/* UV Index*/
+
+.low {
+  background-color: rgb(0, 153, 0);
+}
+
+.moderate {
+  background-color: rgb(255, 255, 0);
+}
+
+.high {
+  background-color: rgb(255, 0, 0);
 }

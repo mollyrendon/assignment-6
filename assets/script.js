@@ -37,11 +37,34 @@ async function getMoreDetails() {
     console.log("citywweatherrestwo", cityWeatherResTwo);
     searchArrTwo = cityWeatherResTwo.data;
   } catch (err) {
-    // handle error
     console.log(err);
   }
   displayForecast();
 }
+
+
+// UV Index Color
+var uvColor = function() {
+  var UVUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={4d664091c5d3ad248b463f239a1cc951}"
+  fetch(UVUrl).then(function(response) {
+    var uvIndex = parseInt(response.value);
+    var uvBox = document.getElementById(".uv-area");
+
+    uvBox.textContent("UV Index: " + response.value);
+
+    if (uvIndex > 0 && uvIndex <= 2.99) {
+      uvBox.addClass("low");
+    }
+    else if (uvIndex >= 3 && uvIndex <= 5.99) {
+      uvBox.addClass("moderate");
+    }
+    else {
+      uvBox.addClass("high");
+    }
+  })
+};
+
+uvColor();
 
 // Display Forecast Function 
 function displayForecast() {
@@ -72,6 +95,7 @@ function displayForecast() {
     uvElement
   );
 }
+
 
 // Save Text Function
 
